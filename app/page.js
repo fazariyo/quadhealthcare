@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import ConsultationForm from '../components/ConsultationForm';
+import PayerLogo from '../components/PayerLogo';
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -401,26 +402,18 @@ export default function Home() {
           </p>
           <div className="pgrid">
             {[
-              { name: 'Aetna', type: 'Commercial Payer', logo: 'Aetna-Logo.png', fallbackName: 'Aetna', cls: 'd1' },
-              { name: 'Humana', type: 'Commercial & Medicare', logo: 'https://logo.clearbit.com/humana.com', fallbackName: 'Humana', cls: 'd2' },
-              { name: 'Blue Cross Blue Shield', type: 'Commercial Payer', logo: 'https://logo.clearbit.com/bcbs.com', fallbackName: 'BCBS', cls: 'd3' },
-              { name: 'Optum / UHC', type: 'Commercial Payer', logo: 'https://logo.clearbit.com/optum.com', fallbackName: 'Optum', cls: 'd4' },
-              { name: 'Magellan Health', type: 'Behavioral Health', logo: 'https://logo.clearbit.com/magellanhealth.com', fallbackName: 'Magellan', cls: 'd1' },
-              { name: 'Molina Healthcare', type: 'Medicaid / Marketplace', logo: 'https://logo.clearbit.com/molinahealthcare.com', fallbackName: 'Molina', cls: 'd2' },
-              { name: 'CareSource', type: 'Medicaid / Medicare', logo: 'https://logo.clearbit.com/caresource.com', fallbackName: 'CareSource', cls: 'd3' },
-              { name: 'Medicare & Medicaid', type: 'Federal Programs', logo: 'https://logo.clearbit.com/cms.gov', fallbackName: 'CMS', cls: 'd4' },
+              { name: 'Aetna', type: 'Commercial Payer', domain: 'aetna.com', fb: 'Aetna', cls: 'd1' },
+              { name: 'Humana', type: 'Commercial & Medicare', domain: 'humana.com', fb: 'Humana', cls: 'd2' },
+              { name: 'Blue Cross Blue Shield', type: 'Commercial Payer', domain: 'bcbs.com', fb: 'BCBS', cls: 'd3' },
+              { name: 'Optum / UHC', type: 'Commercial Payer', domain: 'uhc.com', fb: 'UHC', cls: 'd4' },
+              { name: 'Magellan Health', type: 'Behavioral Health', domain: 'magellanhealth.com', fb: 'Magellan', cls: 'd1' },
+              { name: 'Molina Healthcare', type: 'Medicaid / Marketplace', domain: 'molinahealthcare.com', fb: 'Molina', cls: 'd2' },
+              { name: 'CareSource', type: 'Medicaid / Medicare', domain: 'caresource.com', fb: 'CareSource', cls: 'd3' },
+              { name: 'Medicare & Medicaid', type: 'Federal Programs', domain: 'cms.gov', fb: 'CMS', cls: 'd4' },
             ].map((p) => (
               <div key={p.name} className={`pcard rv ${p.cls}`}>
                 <div className="pcard-icon">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={p.logo}
-                    alt={p.name}
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(p.fallbackName)}&background=fff&color=09A882&bold=true`;
-                    }}
-                  />
+                  <PayerLogo domain={p.domain} name={p.name} fallbackName={p.fb} />
                 </div>
                 <div className="pcard-name">{p.name}</div>
                 <div className="pcard-type">{p.type}</div>
