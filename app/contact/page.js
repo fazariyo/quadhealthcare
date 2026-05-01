@@ -50,7 +50,11 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="cdet-lbl">Phone</div>
-                <div className="cdet-val">+1 (000) 000-0000</div>
+                <div className="cdet-val">
+                  <a href="tel:+13074272883" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    +1 (307) 427-2883
+                  </a>
+                </div>
               </div>
             </div>
             <div className="cdet">
@@ -62,7 +66,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="cdet-lbl">Office</div>
-                <div className="cdet-val">123 Healthcare Ave, Suite 400<br />Atlanta, GA 30301</div>
+                <div className="cdet-val">30 N Gould St, Ste R<br />Sheridan, WY 82801</div>
               </div>
             </div>
             <div className="cdet">
@@ -74,7 +78,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="cdet-lbl">Business Hours</div>
-                <div className="cdet-val">Monday – Friday, 9 AM – 6 PM EST</div>
+                <div className="cdet-val">Monday – Friday, 8 AM – 5 PM MT</div>
               </div>
             </div>
           </div>

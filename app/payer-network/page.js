@@ -9,18 +9,18 @@ export const metadata = {
 };
 
 const payers = [
-  { name: 'Aetna', type: 'Commercial', logo: 'Aetna-Logo.png', fb: 'Aetna' },
-  { name: 'Humana', type: 'Commercial & Medicare', logo: 'https://logo.clearbit.com/humana.com', fb: 'Humana' },
-  { name: 'Blue Cross Blue Shield', type: 'Commercial', logo: 'https://logo.clearbit.com/bcbs.com', fb: 'BCBS' },
-  { name: 'Optum / UHC', type: 'Commercial', logo: 'https://logo.clearbit.com/optum.com', fb: 'Optum' },
-  { name: 'Cigna', type: 'Commercial', logo: 'https://logo.clearbit.com/cigna.com', fb: 'Cigna' },
-  { name: 'Magellan Health', type: 'Behavioral Health', logo: 'https://logo.clearbit.com/magellanhealth.com', fb: 'Magellan' },
-  { name: 'Molina Healthcare', type: 'Medicaid / Marketplace', logo: 'https://logo.clearbit.com/molinahealthcare.com', fb: 'Molina' },
-  { name: 'CareSource', type: 'Medicaid / Medicare', logo: 'https://logo.clearbit.com/caresource.com', fb: 'CareSource' },
-  { name: 'Centene / Ambetter', type: 'Marketplace', logo: 'https://logo.clearbit.com/centene.com', fb: 'Centene' },
-  { name: 'Medicare & Medicaid', type: 'Federal Programs', logo: 'https://logo.clearbit.com/cms.gov', fb: 'CMS' },
-  { name: 'Tricare', type: 'Military & Dependent', logo: 'https://logo.clearbit.com/tricare.mil', fb: 'Tricare' },
-  { name: 'Anthem / Elevance', type: 'Commercial', logo: 'https://logo.clearbit.com/elevancehealth.com', fb: 'Anthem' },
+  { name: 'Aetna', type: 'Commercial', domain: 'aetna.com', fb: 'Aetna' },
+  { name: 'Humana', type: 'Commercial & Medicare', domain: 'humana.com', fb: 'Humana' },
+  { name: 'Blue Cross Blue Shield', type: 'Commercial', domain: 'bcbs.com', fb: 'BCBS' },
+  { name: 'Optum / UHC', type: 'Commercial', domain: 'uhc.com', fb: 'UHC' },
+  { name: 'Cigna', type: 'Commercial', domain: 'cigna.com', fb: 'Cigna' },
+  { name: 'Magellan Health', type: 'Behavioral Health', domain: 'magellanhealth.com', fb: 'Magellan' },
+  { name: 'Molina Healthcare', type: 'Medicaid / Marketplace', domain: 'molinahealthcare.com', fb: 'Molina' },
+  { name: 'CareSource', type: 'Medicaid / Medicare', domain: 'caresource.com', fb: 'CareSource' },
+  { name: 'Centene / Ambetter', type: 'Marketplace', domain: 'centene.com', fb: 'Centene' },
+  { name: 'Medicare & Medicaid', type: 'Federal Programs', domain: 'cms.gov', fb: 'CMS' },
+  { name: 'Tricare', type: 'Military & Dependent', domain: 'tricare.mil', fb: 'Tricare' },
+  { name: 'Anthem / Elevance', type: 'Commercial', domain: 'anthem.com', fb: 'Anthem' },
 ];
 
 export default function PayerNetworkPage() {
@@ -40,7 +40,7 @@ export default function PayerNetworkPage() {
             {payers.map((p) => (
               <div key={p.name} className="pcard rv">
                 <div className="pcard-icon">
-                  <PayerLogo src={p.logo} name={p.name} fallbackName={p.fb} />
+                  <PayerLogo domain={p.domain} name={p.name} fallbackName={p.fb} />
                 </div>
                 <div className="pcard-name">{p.name}</div>
                 <div className="pcard-type">{p.type}</div>

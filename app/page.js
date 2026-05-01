@@ -181,7 +181,7 @@ export default function Home() {
             <div className="hcard" id="hc1">
               <div className="hcard-img">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=85" alt="Doctor credentialing" />
+                <img src="https://images.unsplash.com/photo-1645066928295-2506defde470?w=700&q=85" alt="Doctor in white coat" />
               </div>
               <div className="hcard-body">
                 <div className="hcard-label">Primary Service</div>
@@ -364,7 +364,7 @@ export default function Home() {
           </div>
           <div className="proc-steps">
             {[
-              { n: '01', t: 'Discovery & Audit', d: 'We assess your current enrollment status, identify gaps, and build a custom roadmap for your practice and specialty.', img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=82', alt: 'Discovery', cls: 'd1' },
+              { n: '01', t: 'Discovery & Audit', d: 'We assess your current enrollment status, identify gaps, and build a custom roadmap for your practice and specialty.', img: 'https://images.unsplash.com/photo-1758691463198-dc663b8a64e4?w=600&q=82', alt: 'Discovery & Audit consultation', cls: 'd1' },
               { n: '02', t: 'Documentation & Filing', d: 'We collect all required documents, complete every application, and submit to all target payers simultaneously.', img: 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=82', alt: 'Documentation', cls: 'd2' },
               { n: '03', t: 'Active Follow-Up', d: 'We track every application, respond to payer inquiries, and escalate proactively — you never need to chase anyone.', img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=82', alt: 'Follow-up', cls: 'd3' },
               { n: '04', t: 'Approval & Reporting', d: 'Receive clear confirmation of approvals, effective dates, and provider IDs with full documentation for your records.', img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=82', alt: 'Approval', cls: 'd4' },
@@ -624,7 +624,11 @@ export default function Home() {
               </div>
               <div>
                 <div className="cdet-lbl">Phone</div>
-                <div className="cdet-val">+1 (000) 000-0000</div>
+                <div className="cdet-val">
+                  <a href="tel:+13074272883" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    +1 (307) 427-2883
+                  </a>
+                </div>
               </div>
             </div>
             <div className="cdet">
@@ -636,7 +640,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="cdet-lbl">Business Hours</div>
-                <div className="cdet-val">Monday – Friday, 9 AM – 6 PM EST</div>
+                <div className="cdet-val">Monday – Friday, 8 AM – 5 PM MT</div>
               </div>
             </div>
           </div>

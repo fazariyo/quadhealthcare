@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdwljpw';
+
 const empty = {
   firstName: '',
   lastName: '',
@@ -13,7 +15,7 @@ const empty = {
   service: '',
   message: '',
   consent: false,
-  botcheck: '', // honeypot — Web3Forms-standard field name
+  _gotcha: '', // honeypot — Formspree's standard hidden field
 };
 
 export default function ConsultationForm() {
@@ -33,15 +35,31 @@ export default function ConsultationForm() {
       return;
     }
     setStatus({ state: 'loading', msg: '' });
+
+    const payload = new FormData();
+    payload.append('firstName', form.firstName);
+    payload.append('lastName', form.lastName);
+    payload.append('email', form.email);
+    payload.append('phone', form.phone);
+    payload.append('practice', form.practice || '—');
+    payload.append('specialty', form.specialty || '—');
+    payload.append('service', form.service);
+    payload.append('message', form.message || '—');
+    payload.append('consent', form.consent ? 'Yes' : 'No');
+    payload.append('_subject', `New Consultation: ${form.firstName} ${form.lastName} — ${form.service}`);
+    payload.append('_replyto', form.email);
+    if (form._gotcha) payload.append('_gotcha', form._gotcha);
+
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: { Accept: 'application/json' },
+        body: payload,
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Submission failed. Please try again.');
+      if (!res.ok) {
+        const fieldError = Array.isArray(data?.errors) && data.errors[0]?.message;
+        throw new Error(fieldError || 'Submission failed. Please try again.');
       }
       setStatus({
         state: 'ok',
@@ -84,15 +102,21 @@ export default function ConsultationForm() {
   }
 
   return (
-    <form className="cform" onSubmit={submit} noValidate>
+    <form
+      className="cform"
+      action={FORMSPREE_ENDPOINT}
+      method="POST"
+      onSubmit={submit}
+      noValidate
+    >
       {/* Honeypot — hidden from humans, auto-filled by bots */}
       <input
-        type="checkbox"
-        name="botcheck"
+        type="text"
+        name="_gotcha"
         tabIndex={-1}
         autoComplete="off"
-        checked={!!form.botcheck}
-        onChange={set('botcheck')}
+        value={form._gotcha}
+        onChange={set('_gotcha')}
         aria-hidden="true"
         style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }}
       />
@@ -100,36 +124,36 @@ export default function ConsultationForm() {
       <div className="frow">
         <div className="fg">
           <label>First Name *</label>
-          <input type="text" placeholder="John" required value={form.firstName} onChange={set('firstName')} />
+          <input type="text" name="firstName" placeholder="John" required value={form.firstName} onChange={set('firstName')} />
         </div>
         <div className="fg">
           <label>Last Name *</label>
-          <input type="text" placeholder="Smith" required value={form.lastName} onChange={set('lastName')} />
+          <input type="text" name="lastName" placeholder="Smith" required value={form.lastName} onChange={set('lastName')} />
         </div>
       </div>
       <div className="frow">
         <div className="fg">
           <label>Email Address *</label>
-          <input type="email" placeholder="doctor@practice.com" required value={form.email} onChange={set('email')} />
+          <input type="email" name="email" placeholder="doctor@practice.com" required value={form.email} onChange={set('email')} />
         </div>
         <div className="fg">
           <label>Phone Number *</label>
-          <input type="tel" placeholder="(555) 000-0000" required value={form.phone} onChange={set('phone')} />
+          <input type="tel" name="phone" placeholder="(555) 000-0000" required value={form.phone} onChange={set('phone')} />
         </div>
       </div>
       <div className="frow">
         <div className="fg">
           <label>Practice Name</label>
-          <input type="text" placeholder="Smith Family Medicine" value={form.practice} onChange={set('practice')} />
+          <input type="text" name="practice" placeholder="Smith Family Medicine" value={form.practice} onChange={set('practice')} />
         </div>
         <div className="fg">
           <label>Specialty</label>
-          <input type="text" placeholder="e.g. Family Medicine" value={form.specialty} onChange={set('specialty')} />
+          <input type="text" name="specialty" placeholder="e.g. Family Medicine" value={form.specialty} onChange={set('specialty')} />
         </div>
       </div>
       <div className="fg">
         <label>Service Needed *</label>
-        <select required value={form.service} onChange={set('service')}>
+        <select name="service" required value={form.service} onChange={set('service')}>
           <option value="" disabled>
             Select a service...
           </option>
@@ -146,6 +170,7 @@ export default function ConsultationForm() {
       <div className="fg">
         <label>Tell Us More</label>
         <textarea
+          name="message"
           placeholder="Current payer situation, number of providers, timeline..."
           value={form.message}
           onChange={set('message')}
@@ -154,9 +179,9 @@ export default function ConsultationForm() {
 
       <div className="fg-checkbox">
         <label className="cb-label">
-          <input type="checkbox" required checked={form.consent} onChange={set('consent')} />
+          <input type="checkbox" name="consent" required checked={form.consent} onChange={set('consent')} />
           <span className="cb-text">
-            By checking this box, you <strong>opt-in</strong> to receive marketing and promotional text messages from Quad Healthcare Solutions. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. You can <strong>opt-out</strong> at any time by replying STOP. Reply HELP for help. See our{' '}
+            By checking this box or initiating a conversation with Quad Healthcare Solutions, you <strong>opt-in</strong> to receive marketing and promotional text messages from Quad Healthcare Solutions. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. You can <strong>opt-out</strong> at any time by replying STOP. Reply HELP for help. See our{' '}
             <Link href="/privacy-policy">Privacy Policy</Link> |{' '}
             <Link href="/terms-conditions">Terms &amp; Conditions</Link>.
           </span>
