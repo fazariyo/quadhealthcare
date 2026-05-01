@@ -90,8 +90,10 @@ nav.s{height:78px;background:rgba(7,22,40,0.97);backdrop-filter:blur(24px);borde
 .tpayers{display:flex;flex-direction:column;align-items:center;gap:12px}
 .tplbl{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gm)}
 .tprow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
-.tpill{background:#fff;border:1px solid var(--gl);border-radius:7px;padding:7px 16px;font-size:12px;font-weight:600;color:#344155;transition:all 0.3s;cursor:default}
+.tpill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--gl);border-radius:7px;padding:5px 14px 5px 6px;font-size:12px;font-weight:600;color:#344155;transition:all 0.3s;cursor:default}
 .tpill:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);box-shadow:0 4px 16px rgba(9,168,130,0.12)}
+.tpill-logo{width:22px;height:22px;border-radius:5px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.tpill-logo img{width:100%;height:100%;object-fit:contain}
 
 /* CRED SERVICES */
 .cred-sec{background:#fff;padding:120px 5.5%}

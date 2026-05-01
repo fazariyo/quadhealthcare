@@ -232,13 +232,22 @@ export default function Home() {
           <div className="tpayers rv d4">
             <div className="tplbl">Payer Network</div>
             <div className="tprow">
-              <span className="tpill">Aetna</span>
-              <span className="tpill">Humana</span>
-              <span className="tpill">BCBS</span>
-              <span className="tpill">Optum</span>
-              <span className="tpill">Magellan</span>
-              <span className="tpill">Molina</span>
-              <span className="tpill">CareSource</span>
+              {[
+                { name: 'Aetna', domain: 'aetna.com', fb: 'Aetna' },
+                { name: 'Humana', domain: 'humana.com', fb: 'Humana' },
+                { name: 'BCBS', domain: 'bcbs.com', fb: 'BCBS' },
+                { name: 'Optum', domain: 'uhc.com', fb: 'UHC' },
+                { name: 'Magellan', domain: 'magellanhealth.com', fb: 'Magellan' },
+                { name: 'Molina', domain: 'molinahealthcare.com', fb: 'Molina' },
+                { name: 'CareSource', domain: 'caresource.com', fb: 'CareSource' },
+              ].map((p) => (
+                <span key={p.name} className="tpill">
+                  <span className="tpill-logo">
+                    <PayerLogo domain={p.domain} name={p.name} fallbackName={p.fb} />
+                  </span>
+                  {p.name}
+                </span>
+              ))}
             </div>
           </div>
         </div>
