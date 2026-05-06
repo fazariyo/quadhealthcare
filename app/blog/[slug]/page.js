@@ -9,14 +9,16 @@ export function generateStaticParams() {
   return blog.map((b) => ({ slug: b.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const b = blog.find((x) => x.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const b = blog.find((x) => x.slug === slug);
   if (!b) return {};
   return { title: `${b.title} | Quad Healthcare Solutions`, description: b.excerpt };
 }
 
-export default function BlogPost({ params }) {
-  const post = blog.find((b) => b.slug === params.slug);
+export default async function BlogPost({ params }) {
+  const { slug } = await params;
+  const post = blog.find((b) => b.slug === slug);
   if (!post) notFound();
 
   const related = blog.filter((b) => b.slug !== post.slug).slice(0, 3);

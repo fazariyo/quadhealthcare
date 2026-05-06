@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return billing.map((b) => ({ slug: b.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const b = billing.find((x) => x.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const b = billing.find((x) => x.slug === slug);
   if (!b) return {};
   return {
     title: `${b.title} ${b.titleAccent} | Quad Healthcare Solutions`,
@@ -18,8 +19,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function BillingDetail({ params }) {
-  const item = billing.find((b) => b.slug === params.slug);
+export default async function BillingDetail({ params }) {
+  const { slug } = await params;
+  const item = billing.find((b) => b.slug === slug);
   if (!item) notFound();
 
   const related = billing.filter((b) => b.slug !== item.slug).slice(0, 3);
