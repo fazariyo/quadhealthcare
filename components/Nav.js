@@ -196,7 +196,7 @@ export default function Nav() {
           <br />
           <a href="tel:+13074272883">+1 (307) 427-2883</a>
           <br />
-          Monday – Friday, 8 AM – 5 PM MT
+          Monday – Friday, 9 AM – 5 PM MT
         </div>
       </aside>
     </>

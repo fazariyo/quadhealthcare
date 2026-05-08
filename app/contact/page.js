@@ -78,7 +78,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="cdet-lbl">Business Hours</div>
-                <div className="cdet-val">Monday – Friday, 8 AM – 5 PM MT</div>
+                <div className="cdet-val">Monday – Friday, 9 AM – 5 PM MT</div>
               </div>
             </div>
           </div>
