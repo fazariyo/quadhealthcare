@@ -2,7 +2,7 @@ import PageHero from '../../components/PageHero';
 import PageCta from '../../components/PageCta';
 
 export const metadata = {
-  title: 'Our Credentialing Process | Quad Healthcare Solutions',
+  title: 'Our Credentialing Process | QUAD Healthcare Solutions',
   description:
     'A structured six-phase credentialing process — discovery, data collection, submission, follow-up, approval, and ongoing maintenance.',
 };
@@ -59,7 +59,7 @@ export default function ProcessPage() {
       <section className="ipage">
         <div className="ipage-in">
           <p>
-            At Quad Healthcare Solutions, we have refined our credentialing and enrollment process to be as seamless as possible. We handle the heavy lifting, allowing your providers to focus on what matters most: patient care. Here is exactly how we take you from application to approval.
+            At QUAD Healthcare Solutions, we have refined our credentialing and enrollment process to be as seamless as possible. We handle the heavy lifting, allowing your providers to focus on what matters most: patient care. Here is exactly how we take you from application to approval.
           </p>
 
           {phases.map((p) => (

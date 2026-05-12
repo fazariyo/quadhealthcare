@@ -2,7 +2,7 @@ import PageHero from '../../components/PageHero';
 import ConsultationForm from '../../components/ConsultationForm';
 
 export const metadata = {
-  title: 'Contact Us | Quad Healthcare Solutions',
+  title: 'Contact Us | QUAD Healthcare Solutions',
   description:
     'Request a free consultation. Tell us about your practice and we will build a custom enrollment and revenue-cycle plan.',
 };

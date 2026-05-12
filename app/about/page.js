@@ -2,9 +2,9 @@ import PageHero from '../../components/PageHero';
 import PageCta from '../../components/PageCta';
 
 export const metadata = {
-  title: 'About Us | Quad Healthcare Solutions',
+  title: 'About Us | QUAD Healthcare Solutions',
   description:
-    'Quad Healthcare Solutions is a specialized medical credentialing and revenue-cycle firm serving healthcare practices across the United States.',
+    'QUAD Healthcare Solutions is a specialized medical credentialing and revenue-cycle firm serving healthcare practices across the United States.',
 };
 
 export default function AboutPage() {
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <PageHero
         crumbs={[{ label: 'About Us' }]}
-        title="About Quad Healthcare"
+        title="About QUAD Healthcare"
         titleAccent="Solutions"
         subtitle="A specialized credentialing and revenue-cycle firm built for the realities of modern healthcare administration — precise, proactive, relentless."
       />
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
           <h2>Who We Are</h2>
           <p>
-            Quad Healthcare Solutions is a premier provider of medical credentialing, provider enrollment, and comprehensive medical billing services. Founded with a deep understanding of the administrative challenges healthcare providers face, our goal is to simplify the complex business side of medicine. Our team of seasoned industry experts works as an extension of your practice — ensuring you remain compliant, in-network, and financially optimized.
+            QUAD Healthcare Solutions is a premier provider of medical credentialing, provider enrollment, and comprehensive medical billing services. Founded with a deep understanding of the administrative challenges healthcare providers face, our goal is to simplify the complex business side of medicine. Our team of seasoned industry experts works as an extension of your practice — ensuring you remain compliant, in-network, and financially optimized.
           </p>
 
           <h2>Our Mission</h2>
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
           <h2>What Makes Us Different</h2>
           <p>
-            What sets Quad Healthcare Solutions apart is our relentless dedication to follow-up and our deep relationships with major insurance networks. We don&apos;t believe in ticket queues or automated responses. Every client is assigned a dedicated account manager who knows your practice inside and out. From solo practitioners to large multi-specialty groups, we tailor our approach to meet your specific goals — ensuring you get credentialed faster and paid accurately.
+            What sets QUAD Healthcare Solutions apart is our relentless dedication to follow-up and our deep relationships with major insurance networks. We don&apos;t believe in ticket queues or automated responses. Every client is assigned a dedicated account manager who knows your practice inside and out. From solo practitioners to large multi-specialty groups, we tailor our approach to meet your specific goals — ensuring you get credentialed faster and paid accurately.
           </p>
 
           <h2>By the Numbers</h2>

@@ -171,7 +171,7 @@ export default function Home() {
               <em>Every Barrier.</em>
             </h1>
             <p className="hdesc" id="hdesc">
-              Quad Healthcare Solutions handles the full complexity of provider enrollment, CAQH maintenance, and insurance contracting — so you can focus entirely on patient care.
+              QUAD Healthcare Solutions handles the full complexity of provider enrollment, CAQH maintenance, and insurance contracting — so you can focus entirely on patient care.
             </p>
             <div className="hctas" id="hctas">
               <Link href="/contact" className="bteal">Start Your Enrollment →</Link>
@@ -499,11 +499,11 @@ export default function Home() {
           <div className="track">
             {Array.from({ length: 4 }).flatMap((_, rep) =>
               [
-                { q: 'Quad credentialed our chiropractic practice with four payers in under three weeks. Completely hands-off for us. Best decision we made when opening the practice.', name: 'Dr. Rachel M.', role: 'Chiropractor, Atlanta, GA', img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&fit=crop&q=80' },
-                { q: 'We had been waiting months with another company. Quad took over our Aetna enrollment, resolved the issue, and got us approved in eleven days. Remarkable turnaround.', name: 'Dr. James K.', role: 'Multi-Specialty Group, Dallas, TX', img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=150&fit=crop&q=80' },
+                { q: 'QUAD credentialed our chiropractic practice with four payers in under three weeks. Completely hands-off for us. Best decision we made when opening the practice.', name: 'Dr. Rachel M.', role: 'Chiropractor, Atlanta, GA', img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&fit=crop&q=80' },
+                { q: 'We had been waiting months with another company. QUAD took over our Aetna enrollment, resolved the issue, and got us approved in eleven days. Remarkable turnaround.', name: 'Dr. James K.', role: 'Multi-Specialty Group, Dallas, TX', img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=150&fit=crop&q=80' },
                 { q: 'Their contract negotiation alone paid for their fee. We got significantly better reimbursement rates with Humana than our previous credentialing vendor ever secured for us.', name: 'Dr. Sarah L.', role: 'Family Medicine, Phoenix, AZ', img: 'https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=150&fit=crop&q=80' },
                 { q: 'Finally a credentialing company that actually follows up without being asked. I didn’t make a single call to a payer. They handled everything and kept me informed throughout.', name: 'Dr. Marcus P.', role: 'Psychiatrist, Chicago, IL', img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=150&fit=crop&q=80' },
-                { q: 'Quad enrolled our group with six payers simultaneously. The process was clean, fast, and completely transparent. We were billing within three weeks of starting with them.', name: 'Amanda H., Administrator', role: 'PT Group, Miami, FL', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&fit=crop&q=80' },
+                { q: 'QUAD enrolled our group with six payers simultaneously. The process was clean, fast, and completely transparent. We were billing within three weeks of starting with them.', name: 'Amanda H., Administrator', role: 'PT Group, Miami, FL', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&fit=crop&q=80' },
               ].map((t, i) => (
                 <div className="tcard" key={`${rep}-${i}`}>
                   <div className="tstars">★★★★★</div>

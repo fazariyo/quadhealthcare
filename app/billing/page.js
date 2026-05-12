@@ -4,7 +4,7 @@ import PageCta from '../../components/PageCta';
 import { billing } from '../../components/content/billing';
 
 export const metadata = {
-  title: 'Medical Billing Services | Quad Healthcare Solutions',
+  title: 'Medical Billing Services | QUAD Healthcare Solutions',
   description:
     'End-to-end medical billing — coding, claim submission, denial management, A/R follow-up, payment posting, and patient invoicing.',
 };

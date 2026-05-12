@@ -12,7 +12,7 @@ export const billing = [
       'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1400&q=85',
     blocks: [
       {
-        p: 'At Quad Healthcare Solutions, we understand that a submitted claim is only as good as its accuracy. Our medical billing experts focus on a "clean claim" rate of 98% or higher, ensuring that your practice gets paid on the first pass without the frustrating delays of rejections and denials.',
+        p: 'At QUAD Healthcare Solutions, we understand that a submitted claim is only as good as its accuracy. Our medical billing experts focus on a "clean claim" rate of 98% or higher, ensuring that your practice gets paid on the first pass without the frustrating delays of rejections and denials.',
       },
       {
         h: 'Accurate Medical Coding & Charge Entry',
@@ -53,7 +53,7 @@ export const billing = [
       'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&q=85',
     blocks: [
       {
-        p: 'Denied claims are the single biggest threat to a medical practice\'s cash flow. When insurance companies reject or deny a claim, many practices simply write off the loss due to a lack of time, staff, or specialized expertise to fight back. At Quad Healthcare Solutions, we believe you should be paid for every service you provide, and we fight for every dollar you have rightfully earned.',
+        p: 'Denied claims are the single biggest threat to a medical practice\'s cash flow. When insurance companies reject or deny a claim, many practices simply write off the loss due to a lack of time, staff, or specialized expertise to fight back. At QUAD Healthcare Solutions, we believe you should be paid for every service you provide, and we fight for every dollar you have rightfully earned.',
       },
       {
         h: 'Root Cause Analysis',
@@ -100,7 +100,7 @@ export const billing = [
       'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=85',
     blocks: [
       {
-        p: 'Unpaid claims sitting in your Accounts Receivable (A/R) represent cash that belongs in your bank account, not in limbo. As claims age past 30, 60, and 90 days, the likelihood of collection drops significantly. At Quad Healthcare Solutions, our dedicated A/R team ensures that no claim is forgotten and every dollar owed is actively pursued.',
+        p: 'Unpaid claims sitting in your Accounts Receivable (A/R) represent cash that belongs in your bank account, not in limbo. As claims age past 30, 60, and 90 days, the likelihood of collection drops significantly. At QUAD Healthcare Solutions, our dedicated A/R team ensures that no claim is forgotten and every dollar owed is actively pursued.',
       },
       {
         h: 'Continuous Aging Report Analysis',
@@ -146,7 +146,7 @@ export const billing = [
       'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1400&q=85',
     blocks: [
       {
-        p: 'Payment posting is the pulse of your medical practice\'s revenue cycle. Accurate and timely payment posting provides a clear picture of your financial health, revealing exactly what has been paid, what has been denied, and what patient balances remain. At Quad Healthcare Solutions, we ensure every single dollar is accounted for and perfectly balanced.',
+        p: 'Payment posting is the pulse of your medical practice\'s revenue cycle. Accurate and timely payment posting provides a clear picture of your financial health, revealing exactly what has been paid, what has been denied, and what patient balances remain. At QUAD Healthcare Solutions, we ensure every single dollar is accounted for and perfectly balanced.',
       },
       {
         h: 'Electronic Remittance Advice (ERA) Processing',

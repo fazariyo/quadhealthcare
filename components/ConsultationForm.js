@@ -181,7 +181,7 @@ export default function ConsultationForm() {
         <label className="cb-label">
           <input type="checkbox" name="consent" required checked={form.consent} onChange={set('consent')} />
           <span className="cb-text">
-            By checking this box or initiating a conversation with Quad Healthcare Solutions, you <strong>opt-in</strong> to receive marketing and promotional text messages from Quad Healthcare Solutions. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. You can <strong>opt-out</strong> at any time by replying STOP. Reply HELP for help. See our{' '}
+            By checking this box or initiating a conversation with QUAD Healthcare Solutions, you <strong>opt-in</strong> to receive marketing and promotional text messages from QUAD Healthcare Solutions. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. You can <strong>opt-out</strong> at any time by replying STOP. Reply HELP for help. See our{' '}
             <Link href="/privacy-policy">Privacy Policy</Link> |{' '}
             <Link href="/terms-conditions">Terms &amp; Conditions</Link>.
           </span>

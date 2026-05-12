@@ -2,8 +2,8 @@ import PageHero from '../../components/PageHero';
 import PageCta from '../../components/PageCta';
 
 export const metadata = {
-  title: 'Privacy Policy | Quad Healthcare Solutions',
-  description: 'How Quad Healthcare Solutions collects, uses, and protects your personal data.',
+  title: 'Privacy Policy | QUAD Healthcare Solutions',
+  description: 'How QUAD Healthcare Solutions collects, uses, and protects your personal data.',
 };
 
 export default function PrivacyPolicy() {
@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
       <section className="ipage">
         <div className="ipage-in">
           <p>
-            Quad Healthcare Solutions (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is dedicated to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to ensure its security. By using our services, you agree to the terms of this Privacy Policy.
+            QUAD Healthcare Solutions (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is dedicated to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to ensure its security. By using our services, you agree to the terms of this Privacy Policy.
           </p>
 
           <h2>1. Information Collection and Use</h2>

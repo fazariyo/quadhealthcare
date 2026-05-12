@@ -12,7 +12,7 @@ export const services = [
       'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&q=85',
     blocks: [
       {
-        p: 'Provider enrollment is the critical first step in revenue cycle management. Without proper enrollment and linkage to insurance networks, your practice cannot be reimbursed for the care you provide. At Quad Healthcare Solutions, we take the complex, time-consuming burden of enrollment completely off your shoulders.',
+        p: 'Provider enrollment is the critical first step in revenue cycle management. Without proper enrollment and linkage to insurance networks, your practice cannot be reimbursed for the care you provide. At QUAD Healthcare Solutions, we take the complex, time-consuming burden of enrollment completely off your shoulders.',
       },
       {
         h: 'Comprehensive Enrollment Solutions',
@@ -111,7 +111,7 @@ export const services = [
       },
       {
         h: 'Proactive Re-Credentialing Services',
-        p: 'At Quad Healthcare Solutions, we eliminate the risk of lapsed contracts by managing your re-credentialing cycles proactively. Our services include:',
+        p: 'At QUAD Healthcare Solutions, we eliminate the risk of lapsed contracts by managing your re-credentialing cycles proactively. Our services include:',
         list: [
           '**Cycle Tracking:** We maintain a comprehensive database of your payer contracts and expiration dates, initiating the re-credentialing process well before payer deadlines.',
           '**Medicare Revalidation:** Expert handling of Medicare PECOS revalidations to ensure your billing privileges remain fully active without interruption.',
@@ -152,7 +152,7 @@ export const services = [
       'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=1400&q=85',
     blocks: [
       {
-        p: "Accepting a payer's standard, default fee schedule is one of the most common ways healthcare practices leave substantial revenue on the table. Insurance networks rely on the fact that most providers will simply sign the initial contract without pushback. At Quad Healthcare Solutions, we level the playing field.",
+        p: "Accepting a payer's standard, default fee schedule is one of the most common ways healthcare practices leave substantial revenue on the table. Insurance networks rely on the fact that most providers will simply sign the initial contract without pushback. At QUAD Healthcare Solutions, we level the playing field.",
       },
       {
         h: 'Strategic Revenue Optimization',

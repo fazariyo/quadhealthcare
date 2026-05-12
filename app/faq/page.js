@@ -42,7 +42,7 @@ const faqs = [
     a: 'Commercial payers typically require re-credentialing every 2 to 3 years. Medicare requires revalidation every 5 years (3 years for DMEPOS suppliers). State Medicaid cycles vary. We track every cycle proactively so nothing lapses.',
   },
   {
-    q: 'Is my data secure with Quad Healthcare Solutions?',
+    q: 'Is my data secure with QUAD Healthcare Solutions?',
     a: 'Yes. We are HIPAA-aligned, sign a Business Associate Agreement (BAA) with every client, and use enterprise-grade encryption (AES-256 at rest, TLS 1.2+ in transit). All staff complete annual HIPAA and FWA training, and we undergo regular third-party security assessments.',
   },
   {

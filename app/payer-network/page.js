@@ -3,7 +3,7 @@ import PageCta from '../../components/PageCta';
 import PayerLogo from '../../components/PayerLogo';
 
 export const metadata = {
-  title: 'Our Payer Network | Quad Healthcare Solutions',
+  title: 'Our Payer Network | QUAD Healthcare Solutions',
   description:
     'Direct working relationships with every major commercial, government, and regional payer — Aetna, Humana, BCBS, Optum/UHC, Medicare, Medicaid, and more.',
 };
@@ -53,7 +53,7 @@ export default function PayerNetworkPage() {
       <section className="ipage">
         <div className="ipage-in">
           <p>
-            At Quad Healthcare Solutions, we understand that your practice&apos;s revenue depends on swift and accurate enrollment with the right insurance carriers. Over the years, we have cultivated direct, high-level relationships with major commercial, government, and regional payers across the United States.
+            At QUAD Healthcare Solutions, we understand that your practice&apos;s revenue depends on swift and accurate enrollment with the right insurance carriers. Over the years, we have cultivated direct, high-level relationships with major commercial, government, and regional payers across the United States.
           </p>
 
           <h2>Commercial Insurance Carriers</h2>
@@ -91,7 +91,7 @@ export default function PayerNetworkPage() {
             <li><strong>Local IPAs &amp; ACOs:</strong> Independent Practice Associations and Accountable Care Organizations in key metro markets.</li>
           </ul>
 
-          <h2>The Quad Advantage</h2>
+          <h2>The QUAD Advantage</h2>
           <p>
             Our deep understanding of each payer&apos;s unique application quirks, portal systems (like CAQH ProView and Availity), and committee review schedules allows us to bypass common delays. We don&apos;t just submit applications — we aggressively track and follow up with our designated payer representatives until your contract effective date is secured.
           </p>

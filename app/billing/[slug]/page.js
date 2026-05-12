@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const b = billing.find((x) => x.slug === slug);
   if (!b) return {};
   return {
-    title: `${b.title} ${b.titleAccent} | Quad Healthcare Solutions`,
+    title: `${b.title} ${b.titleAccent} | QUAD Healthcare Solutions`,
     description: b.tagline,
   };
 }

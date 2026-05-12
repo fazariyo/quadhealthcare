@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import GlobalEffects from '../components/GlobalEffects';
 
 export const metadata = {
-  title: 'Quad Healthcare Solutions | Medical Credentialing Experts',
+  title: 'QUAD Healthcare Solutions | Medical Credentialing Experts',
   description:
     'Specialized medical credentialing, provider enrollment, and medical billing services for healthcare practices across the United States.',
 };

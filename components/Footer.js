@@ -25,7 +25,7 @@ export default function Footer() {
             <Link href="/" className="nlogo" style={{ textDecoration: 'none' }}>
               <div className="nlm"><LogoSvg /></div>
               <div className="nltxt">
-                <span className="nlt">Quad Healthcare</span>
+                <span className="nlt">QUAD Healthcare</span>
                 <span className="nls">Solutions</span>
               </div>
             </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-bot">
-          <div className="foot-copy">© 2025 Quad Healthcare Solutions. All rights reserved.</div>
+          <div className="foot-copy">© 2025 QUAD Healthcare Solutions. All rights reserved.</div>
           <div className="foot-legal">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-conditions">Terms &amp; Conditions</Link>

@@ -4,7 +4,7 @@ import PageCta from '../../components/PageCta';
 import { blog } from '../../components/content/blog';
 
 export const metadata = {
-  title: 'Healthcare Credentialing Blog | Quad Healthcare Solutions',
+  title: 'Healthcare Credentialing Blog | QUAD Healthcare Solutions',
   description:
     'Expert articles on medical credentialing, CAQH, PECOS, payer contracting, and revenue-cycle best practices.',
 };

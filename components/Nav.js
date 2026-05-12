@@ -72,7 +72,7 @@ export default function Nav() {
         <Link href="/" className="nlogo">
           <div className="nlm"><LogoSvg idSuffix="nav" /></div>
           <div className="nltxt">
-            <span className="nlt">Quad Healthcare</span>
+            <span className="nlt">QUAD Healthcare</span>
             <span className="nls">Solutions</span>
           </div>
         </Link>
@@ -125,7 +125,7 @@ export default function Nav() {
           <Link href="/" className="nlogo" onClick={closeAll}>
             <div className="nlm"><LogoSvg idSuffix="mob" /></div>
             <div className="nltxt">
-              <span className="nlt">Quad Healthcare</span>
+              <span className="nlt">QUAD Healthcare</span>
               <span className="nls">Solutions</span>
             </div>
           </Link>

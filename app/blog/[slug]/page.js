@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const b = blog.find((x) => x.slug === slug);
   if (!b) return {};
-  return { title: `${b.title} | Quad Healthcare Solutions`, description: b.excerpt };
+  return { title: `${b.title} | QUAD Healthcare Solutions`, description: b.excerpt };
 }
 
 export default async function BlogPost({ params }) {

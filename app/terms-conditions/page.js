@@ -2,8 +2,8 @@ import PageHero from '../../components/PageHero';
 import PageCta from '../../components/PageCta';
 
 export const metadata = {
-  title: 'Terms & Conditions | Quad Healthcare Solutions',
-  description: 'Terms of service for the Quad Healthcare Solutions website and engagements.',
+  title: 'Terms & Conditions | QUAD Healthcare Solutions',
+  description: 'Terms of service for the QUAD Healthcare Solutions website and engagements.',
 };
 
 export default function TermsConditions() {
@@ -19,12 +19,12 @@ export default function TermsConditions() {
       <section className="ipage">
         <div className="ipage-in">
           <p>
-            Welcome to Quad Healthcare Solutions website. By accessing or using this Site, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these Terms, you must not use this Site.
+            Welcome to QUAD Healthcare Solutions website. By accessing or using this Site, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these Terms, you must not use this Site.
           </p>
 
           <h2>Consent</h2>
           <p>
-            By submitting phone number in the contact us form or initiating a message to Quad Healthcare Solutions phone number, you consent to receive marketing messages from Quad Healthcare Solutions. Message and data rates may apply. Message frequency varies. Unsubscribe anytime by replying STOP. Reply HELP for help.
+            By submitting phone number in the contact us form or initiating a message to QUAD Healthcare Solutions phone number, you consent to receive marketing messages from QUAD Healthcare Solutions. Message and data rates may apply. Message frequency varies. Unsubscribe anytime by replying STOP. Reply HELP for help.
           </p>
 
           <h2>Changes to Terms</h2>
@@ -34,7 +34,7 @@ export default function TermsConditions() {
 
           <h2>Intellectual Property</h2>
           <p>
-            All content on this Site, including text, graphics, logos, images, audio clips, and software, is the property of Quad Healthcare Solutions and protected by intellectual property laws. You may not use, reproduce, distribute, modify, or create derivative works without our express written consent.
+            All content on this Site, including text, graphics, logos, images, audio clips, and software, is the property of QUAD Healthcare Solutions and protected by intellectual property laws. You may not use, reproduce, distribute, modify, or create derivative works without our express written consent.
           </p>
 
           <h2>Privacy</h2>
@@ -59,7 +59,7 @@ export default function TermsConditions() {
 
           <h2>Limitation of Liability</h2>
           <p>
-            To the fullest extent permitted by applicable law, Quad Healthcare Solutions not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.
+            To the fullest extent permitted by applicable law, QUAD Healthcare Solutions not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.
           </p>
 
           <h2>Governing Law</h2>
@@ -119,7 +119,7 @@ export default function TermsConditions() {
 
           <h2>Entire Agreement</h2>
           <p>
-            These Terms constitute the entire agreement between you and Quad Healthcare Solutions regarding the Site.
+            These Terms constitute the entire agreement between you and QUAD Healthcare Solutions regarding the Site.
           </p>
 
           <h2>Headings</h2>
