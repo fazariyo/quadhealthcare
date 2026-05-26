@@ -54,7 +54,7 @@ export default function Footer() {
             <Link href="/about">About Us</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/faq">FAQ&apos;s</Link>
-            <Link href="/compliance">Compliance</Link>
+            <Link href="/hipaa-compliance">HIPAA Compliance</Link>
             <Link href="/process">Our Process</Link>
             <Link href="/payer-network">Payer Network</Link>
             <Link href="/contact">Contact Us</Link>

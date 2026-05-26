@@ -2,18 +2,18 @@ import PageHero from '../../components/PageHero';
 import PageCta from '../../components/PageCta';
 
 export const metadata = {
-  title: 'Compliance & Security | QUAD Healthcare Solutions',
+  title: 'HIPAA Compliance | QUAD Healthcare Solutions',
   description:
     'HIPAA-aligned processes and enterprise-grade data security — our commitment to safeguarding your practice and your patient data.',
 };
 
-export default function CompliancePage() {
+export default function HipaaCompliancePage() {
   return (
     <>
       <PageHero
-        crumbs={[{ label: 'Compliance' }]}
-        title="Compliance"
-        titleAccent="& Security"
+        crumbs={[{ label: 'HIPAA Compliance' }]}
+        title="HIPAA"
+        titleAccent="Compliance"
         subtitle="Ensuring data security and compliance in healthcare administration."
       />
 

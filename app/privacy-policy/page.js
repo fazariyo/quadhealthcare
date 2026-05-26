@@ -45,10 +45,40 @@ export default function PrivacyPolicy() {
             The security of your Personal Information is important to us. We employ commercially acceptable means to protect your Personal Information.
           </p>
 
-          <h2>5. Opt-Out</h2>
+          <h2>5. SMS/Text Messaging Program</h2>
           <p>
-            If you wish to be removed from receiving future communications, you can opt-out by texting STOP.
+            QUAD Healthcare Solutions offers an SMS/text messaging program to provide credentialing updates, enrollment status notifications, appointment reminders, and service-related information. By opting in to our SMS program, you agree to the following:
           </p>
+          <ul>
+            <li>
+              <strong>Opt-In:</strong> You may opt in to receive text messages from QUAD Healthcare Solutions by checking the SMS consent checkbox on our Contact or Enrollment forms, or by texting START to +1 (307) 381-0889. Your opt-in constitutes your express written consent to receive recurring automated text messages from QUAD Healthcare Solutions at the mobile number you provide.
+            </li>
+            <li>
+              <strong>Message Content:</strong> Messages may include credentialing status updates, insurance panel enrollment progress, appointment reminders, billing notifications, and general service information related to your account with QUAD Healthcare Solutions.
+            </li>
+            <li>
+              <strong>Message Frequency:</strong> Message frequency varies based on your account activity. You may receive up to 4 messages per month.
+            </li>
+            <li>
+              <strong>Message and Data Rates:</strong> Standard message and data rates may apply depending on your mobile carrier and plan. QUAD Healthcare Solutions is not responsible for any charges from your carrier.
+            </li>
+            <li>
+              <strong>Opt-Out:</strong> You may opt out of receiving text messages at any time by replying STOP to any message you receive from us. After opting out, you will receive one final confirmation message and will no longer receive SMS messages from QUAD Healthcare Solutions unless you opt in again.
+            </li>
+            <li>
+              <strong>Help:</strong> For assistance with our SMS program, reply HELP to any message, or contact us at{' '}
+              <a href="mailto:info@quadhealthcaresolutions.com">info@quadhealthcaresolutions.com</a> or call +1 (307) 381-0889.
+            </li>
+            <li>
+              <strong>Consent Not Required for Purchase:</strong> Consent to receive text messages is not a condition of purchasing any services from QUAD Healthcare Solutions.
+            </li>
+            <li>
+              <strong>Data Protection:</strong> Mobile information, including phone numbers and opt-in data, will not be shared with third parties or affiliates for marketing or promotional purposes. All categories above exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+            </li>
+            <li>
+              <strong>Supported Carriers:</strong> Our SMS program is supported by major U.S. carriers including AT&amp;T, Verizon, T-Mobile, Sprint, and others. Carriers are not liable for delayed or undelivered messages.
+            </li>
+          </ul>
 
           <h2>6. Changes to This Privacy Policy</h2>
           <p>

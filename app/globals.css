@@ -3,6 +3,7 @@
   --navy:#071628;--navy2:#0D2244;--navy3:#163060;
   --teal:#09A882;--teal2:#12C9A0;--teal3:rgba(9,168,130,0.12);
   --gold:#C4932A;--gold2:#E2AE48;--gold3:rgba(196,147,42,0.1);
+  --brand-green:#057A60;
   --white:#fff;--off:#F5F8FC;--gl:#E6ECF4;--gm:#8A97AC;
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'DM Sans',system-ui,sans-serif;
@@ -299,6 +300,14 @@ nav.s{height:78px;background:rgba(7,22,40,0.97);backdrop-filter:blur(24px);borde
 .cb-text { font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.5; }
 .cb-text a { color: var(--teal2); text-decoration: none; transition: color 0.2s; cursor:pointer; }
 .cb-text a:hover { color: #fff; text-decoration: underline; }
+.cb-disclaimer { margin: 10px 0 0 32px; font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.55; }
+.cb-disclaimer p { margin: 0 0 6px; }
+.cb-disclaimer ul { margin: 0 0 8px; padding-left: 18px; }
+.cb-disclaimer li { margin-bottom: 4px; }
+.cb-disclaimer .cb-links a { color: var(--teal2); text-decoration: none; transition: color 0.2s; }
+.cb-disclaimer .cb-links a:hover { color: #fff; text-decoration: underline; }
+.modal-cform .cb-disclaimer { color: var(--gm); }
+.modal-cform .cb-disclaimer .cb-links a { color: var(--teal); }
 
 /* FORM STATUS */
 .form-alert{padding:14px 18px;border-radius:11px;font-size:13.5px;margin-bottom:18px;line-height:1.55;font-weight:400}
@@ -639,4 +648,59 @@ footer{background:#040C18;padding:70px 5.5% 44px}
   .pcta-btns .bteal,.pcta-btns .bghost{justify-content:center;width:100%;padding:14px 22px;font-size:14.5px}
   .not-found{padding:100px 5%}
   .not-found h1{font-size:52px}
+}
+
+/* ═══════════════════════════════ BRAND-GREEN HEADINGS ═══════════════════════════════ */
+/* Primary and secondary headings rendered on light backgrounds get the QUAD brand green. */
+/* Headings inside dark sections (.ph, .pcta, .hero, nav, footer, drawer) keep their original colors. */
+h1, h2, h3,
+.ipage-in h2,
+.ipage-in h3,
+.csvc-name,
+.pstep-title,
+.mcard-name,
+.bcard-title,
+.faq-question,
+.hub-card-title,
+.related-head h3,
+.related-title,
+.legal-title,
+.legal-text h3,
+.tquote,
+.cred-title,
+.proc-title,
+.about-title,
+.payers-title,
+.mktg-title,
+.tests-title,
+.blog-title,
+.faq-title,
+.contact-title,
+.section-title,
+.s-title,
+.shead,
+.shead-title,
+.about-hero h1,
+.not-found h1 {
+  color: var(--brand-green) !important;
+}
+
+/* Make sure white headings on dark backgrounds stay white */
+.ph-title,
+.pcta-title,
+.hh1,
+.hero h1, .hero h2, .hero h3,
+.ph h1, .ph h2, .ph h3,
+.pcta h1, .pcta h2, .pcta h3,
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+nav h1, nav h2, nav h3,
+.mnav h1, .mnav h2, .mnav h3 {
+  color: #fff !important;
+}
+
+/* Brand-green accents within headings stay green */
+.ph-title em, .ph-title span.em,
+.pcta-title em, .pcta-title span.em,
+.hh1 em {
+  color: var(--teal2) !important;
 }

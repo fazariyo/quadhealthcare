@@ -627,8 +627,8 @@ export default function Home() {
               <div>
                 <div className="cdet-lbl">Phone</div>
                 <div className="cdet-val">
-                  <a href="tel:+13074272883" style={{ color: 'inherit', textDecoration: 'none' }}>
-                    +1 (307) 427-2883
+                  <a href="tel:+13073810889" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    +1 (307) 381-0889
                   </a>
                 </div>
               </div>

@@ -2,83 +2,35 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdwljpw';
-
-const empty = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  practice: '',
-  specialty: '',
-  service: '',
-  message: '',
-  consent: false,
-  _gotcha: '', // honeypot — Formspree's standard hidden field
-};
+const FORMSPREE_FORM_ID = 'mredogng';
 
 export default function ConsultationForm() {
-  const [form, setForm] = useState(empty);
-  const [status, setStatus] = useState({ state: 'idle', msg: '' });
+  const [state, handleSubmit, reset] = useForm(FORMSPREE_FORM_ID);
+  const [smsConsent, setSmsConsent] = useState(false);
+  const [service, setService] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [consentError, setConsentError] = useState('');
 
-  const set = (k) => (e) =>
-    setForm((f) => ({
-      ...f,
-      [k]: e.target.type === 'checkbox' ? e.target.checked : e.target.value,
-    }));
-
-  const submit = async (e) => {
-    e.preventDefault();
-    if (!form.consent) {
-      setStatus({ state: 'error', msg: 'Please check the consent box to proceed.' });
+  const onSubmit = (e) => {
+    if (!smsConsent) {
+      e.preventDefault();
+      setConsentError('Please check the SMS consent box to proceed.');
       return;
     }
-    setStatus({ state: 'loading', msg: '' });
-
-    const payload = new FormData();
-    payload.append('firstName', form.firstName);
-    payload.append('lastName', form.lastName);
-    payload.append('email', form.email);
-    payload.append('phone', form.phone);
-    payload.append('practice', form.practice || '—');
-    payload.append('specialty', form.specialty || '—');
-    payload.append('service', form.service);
-    payload.append('message', form.message || '—');
-    payload.append('consent', form.consent ? 'Yes' : 'No');
-    payload.append('_subject', `New Consultation: ${form.firstName} ${form.lastName} — ${form.service}`);
-    payload.append('_replyto', form.email);
-    if (form._gotcha) payload.append('_gotcha', form._gotcha);
-
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: payload,
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        const fieldError = Array.isArray(data?.errors) && data.errors[0]?.message;
-        throw new Error(fieldError || 'Submission failed. Please try again.');
-      }
-      setStatus({
-        state: 'ok',
-        msg: 'Thank you! A specialist will reach out within one business day.',
-      });
-      setForm(empty);
-    } catch (err) {
-      setStatus({
-        state: 'error',
-        msg:
-          err.message ||
-          'Could not send your message. Please try again, or email info@quadhealthcaresolutions.com directly.',
-      });
-    }
+    setConsentError('');
+    handleSubmit(e);
   };
 
-  const loading = status.state === 'loading';
+  const sending = state.submitting;
+  const topLevelErrors =
+    state.errors && Array.isArray(state.errors)
+      ? state.errors.filter((err) => !err.field).map((err) => err.message)
+      : [];
 
-  if (status.state === 'ok') {
+  if (state.succeeded) {
     return (
       <div className="cform form-ok">
         <div className="form-ok-icon">
@@ -88,12 +40,21 @@ export default function ConsultationForm() {
           </svg>
         </div>
         <h3 className="form-ok-title">Message Sent</h3>
-        <p className="form-ok-text">{status.msg}</p>
+        <p className="form-ok-text">
+          Thank you! A specialist will reach out within one business day.
+        </p>
         <button
           type="button"
           className="bghost"
           style={{ marginTop: 22 }}
-          onClick={() => setStatus({ state: 'idle', msg: '' })}
+          onClick={() => {
+            reset();
+            setSmsConsent(false);
+            setService('');
+            setFirstName('');
+            setLastName('');
+            setConsentError('');
+          }}
         >
           Send Another
         </button>
@@ -104,9 +65,9 @@ export default function ConsultationForm() {
   return (
     <form
       className="cform"
-      action={FORMSPREE_ENDPOINT}
+      action={`https://formspree.io/f/${FORMSPREE_FORM_ID}`}
       method="POST"
-      onSubmit={submit}
+      onSubmit={onSubmit}
       noValidate
     >
       {/* Honeypot — hidden from humans, auto-filled by bots */}
@@ -115,45 +76,77 @@ export default function ConsultationForm() {
         name="_gotcha"
         tabIndex={-1}
         autoComplete="off"
-        value={form._gotcha}
-        onChange={set('_gotcha')}
         aria-hidden="true"
         style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }}
       />
 
+      {/* Backup email + subject line via Formspree special fields */}
+      <input type="hidden" name="_cc" value="info@quadhealthcaresolutions.com" />
+      <input
+        type="hidden"
+        name="_subject"
+        value={`New Consultation: ${firstName} ${lastName}${service ? ` — ${service}` : ''}`}
+      />
+
       <div className="frow">
         <div className="fg">
-          <label>First Name *</label>
-          <input type="text" name="firstName" placeholder="John" required value={form.firstName} onChange={set('firstName')} />
+          <label htmlFor="firstName">First Name *</label>
+          <input
+            id="firstName"
+            type="text"
+            name="firstName"
+            placeholder="John"
+            required
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
         </div>
         <div className="fg">
-          <label>Last Name *</label>
-          <input type="text" name="lastName" placeholder="Smith" required value={form.lastName} onChange={set('lastName')} />
+          <label htmlFor="lastName">Last Name *</label>
+          <input
+            id="lastName"
+            type="text"
+            name="lastName"
+            placeholder="Smith"
+            required
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
         </div>
       </div>
       <div className="frow">
         <div className="fg">
-          <label>Email Address *</label>
-          <input type="email" name="email" placeholder="doctor@practice.com" required value={form.email} onChange={set('email')} />
+          <label htmlFor="email">Email Address *</label>
+          <input id="email" type="email" name="email" placeholder="doctor@practice.com" required />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
         <div className="fg">
-          <label>Phone Number *</label>
-          <input type="tel" name="phone" placeholder="(555) 000-0000" required value={form.phone} onChange={set('phone')} />
+          <label htmlFor="phone">Phone Number *</label>
+          <input id="phone" type="tel" name="phone" placeholder="(555) 000-0000" required />
+          <ValidationError prefix="Phone" field="phone" errors={state.errors} />
         </div>
       </div>
       <div className="frow">
         <div className="fg">
-          <label>Practice Name</label>
-          <input type="text" name="practice" placeholder="Smith Family Medicine" value={form.practice} onChange={set('practice')} />
+          <label htmlFor="practice">Practice Name</label>
+          <input id="practice" type="text" name="practice" placeholder="Smith Family Medicine" />
         </div>
         <div className="fg">
-          <label>Specialty</label>
-          <input type="text" name="specialty" placeholder="e.g. Family Medicine" value={form.specialty} onChange={set('specialty')} />
+          <label htmlFor="specialty">Specialty</label>
+          <input id="specialty" type="text" name="specialty" placeholder="e.g. Family Medicine" />
         </div>
       </div>
       <div className="fg">
-        <label>Service Needed *</label>
-        <select name="service" required value={form.service} onChange={set('service')}>
+        <label htmlFor="service">Service Needed *</label>
+        <select
+          id="service"
+          name="service"
+          required
+          value={service}
+          onChange={(e) => setService(e.target.value)}
+        >
           <option value="" disabled>
             Select a service...
           </option>
@@ -166,31 +159,60 @@ export default function ConsultationForm() {
           <option>Credentialing + Billing Bundle</option>
           <option>Other Inquiry</option>
         </select>
+        <ValidationError prefix="Service" field="service" errors={state.errors} />
       </div>
       <div className="fg">
-        <label>Tell Us More</label>
+        <label htmlFor="message">Tell Us More</label>
         <textarea
+          id="message"
           name="message"
           placeholder="Current payer situation, number of providers, timeline..."
-          value={form.message}
-          onChange={set('message')}
         />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
 
       <div className="fg-checkbox">
         <label className="cb-label">
-          <input type="checkbox" name="consent" required checked={form.consent} onChange={set('consent')} />
+          <input
+            type="checkbox"
+            name="smsConsent"
+            value="Yes"
+            required
+            checked={smsConsent}
+            onChange={(e) => {
+              setSmsConsent(e.target.checked);
+              if (e.target.checked) setConsentError('');
+            }}
+          />
           <span className="cb-text">
-            By checking this box or initiating a conversation with QUAD Healthcare Solutions, you <strong>opt-in</strong> to receive marketing and promotional text messages from QUAD Healthcare Solutions. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. You can <strong>opt-out</strong> at any time by replying STOP. Reply HELP for help. See our{' '}
-            <Link href="/privacy-policy">Privacy Policy</Link> |{' '}
-            <Link href="/terms-conditions">Terms &amp; Conditions</Link>.
+            I consent to receive SMS/text messages from QUAD Healthcare Solutions at the phone number provided above.
           </span>
         </label>
+        <div className="cb-disclaimer">
+          <p>I understand that:</p>
+          <ul>
+            <li>Messages may include medical credentialing updates, provider enrollment status, service notifications, and account reminders.</li>
+            <li>Message frequency varies.</li>
+            <li>Message and data rates may apply.</li>
+            <li>Consent is not a condition of purchasing services.</li>
+            <li>I can unsubscribe at any time by replying STOP. Reply HELP for help.</li>
+          </ul>
+          <p className="cb-links">
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            {' | '}
+            <Link href="/terms-conditions">Terms &amp; Conditions</Link>
+          </p>
+        </div>
       </div>
 
-      {status.state === 'error' && (
+      {consentError && (
         <div className="form-alert form-alert-error" role="alert">
-          {status.msg}
+          {consentError}
+        </div>
+      )}
+      {topLevelErrors.length > 0 && (
+        <div className="form-alert form-alert-error" role="alert">
+          {topLevelErrors.join(' ')}
         </div>
       )}
 
@@ -198,9 +220,9 @@ export default function ConsultationForm() {
         type="submit"
         className="bteal"
         style={{ width: '100%', justifyContent: 'center' }}
-        disabled={loading}
+        disabled={sending}
       >
-        {loading ? 'Sending…' : 'Submit & Request Free Consultation →'}
+        {sending ? 'Sending…' : 'Submit & Request Free Consultation →'}
       </button>
     </form>
   );

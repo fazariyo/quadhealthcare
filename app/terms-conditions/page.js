@@ -22,10 +22,34 @@ export default function TermsConditions() {
             Welcome to QUAD Healthcare Solutions website. By accessing or using this Site, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these Terms, you must not use this Site.
           </p>
 
-          <h2>Consent</h2>
+          <h2>SMS/Text Messaging Program Terms</h2>
           <p>
-            By submitting phone number in the contact us form or initiating a message to QUAD Healthcare Solutions phone number, you consent to receive marketing messages from QUAD Healthcare Solutions. Message and data rates may apply. Message frequency varies. Unsubscribe anytime by replying STOP. Reply HELP for help.
+            By checking the SMS consent checkbox on our Contact or Enrollment forms, or by texting START to +1 (307) 381-0889, you expressly consent to receive recurring automated text messages from QUAD Healthcare Solutions at the mobile number you provide. These messages may include credentialing updates, enrollment status notifications, appointment reminders, and service-related information.
           </p>
+          <ul>
+            <li>
+              <strong>Message Frequency:</strong> Message frequency varies based on your account activity, up to 4 messages per month.
+            </li>
+            <li>
+              <strong>Message and Data Rates:</strong> Standard message and data rates may apply. Contact your mobile carrier for details.
+            </li>
+            <li>
+              <strong>Opt-Out:</strong> You may opt out at any time by replying STOP to any message. You will receive one final confirmation and no further messages unless you re-subscribe.
+            </li>
+            <li>
+              <strong>Help:</strong> Reply HELP to any message for assistance, or contact us at{' '}
+              <a href="mailto:info@quadhealthcaresolutions.com">info@quadhealthcaresolutions.com</a> or +1 (307) 381-0889.
+            </li>
+            <li>
+              <strong>Consent Not Required:</strong> Consent to receive text messages is not a condition of purchasing any goods or services from QUAD Healthcare Solutions.
+            </li>
+            <li>
+              <strong>Privacy:</strong> Your mobile number and opt-in data will not be shared with third parties for marketing purposes. See our Privacy Policy for full details.
+            </li>
+            <li>
+              <strong>Supported Carriers:</strong> Major U.S. carriers are supported including AT&amp;T, Verizon, T-Mobile, Sprint, and others. Carriers are not liable for delayed or undelivered messages.
+            </li>
+          </ul>
 
           <h2>Changes to Terms</h2>
           <p>
