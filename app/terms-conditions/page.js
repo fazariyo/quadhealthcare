@@ -19,7 +19,7 @@ export default function TermsConditions() {
       <section className="ipage">
         <div className="ipage-in">
           <p>
-            Welcome to QUAD Healthcare Solutions website. By accessing or using this Site, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these Terms, you must not use this Site.
+            Welcome to QUAD SOLUTIONS LLC doing business as QUAD Healthcare Solutions website. By accessing or using this Site, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these Terms, you must not use this Site.
           </p>
 
           <h2>SMS/Text Messaging Program Terms</h2>
@@ -83,7 +83,7 @@ export default function TermsConditions() {
 
           <h2>Limitation of Liability</h2>
           <p>
-            To the fullest extent permitted by applicable law, QUAD Healthcare Solutions not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.
+            To the fullest extent permitted by applicable law, QUAD Healthcare Solutions will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.
           </p>
 
           <h2>Governing Law</h2>

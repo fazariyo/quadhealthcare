@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-bot">
-          <div className="foot-copy">© 2025 QUAD Healthcare Solutions. All rights reserved.</div>
+          <div className="foot-copy">© 2025 QUAD SOLUTIONS LLC, doing business as QUAD Healthcare Solutions. All rights reserved.</div>
           <div className="foot-legal">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-conditions">Terms &amp; Conditions</Link>

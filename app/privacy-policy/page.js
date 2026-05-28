@@ -19,6 +19,9 @@ export default function PrivacyPolicy() {
       <section className="ipage">
         <div className="ipage-in">
           <p>
+            Welcome to the QUAD Healthcare Solutions website. By accessing or using this Site, you agree to comply with and be bound by these Terms and Conditions established by QUAD SOLUTIONS LLC, doing business as QUAD Healthcare Solutions. If you do not agree with any part of these Terms, you must not use this Site.
+          </p>
+          <p>
             QUAD Healthcare Solutions (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is dedicated to safeguarding your privacy and protecting your personal information. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to ensure its security. By using our services, you agree to the terms of this Privacy Policy.
           </p>
 
