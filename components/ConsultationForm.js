@@ -185,14 +185,14 @@ export default function ConsultationForm() {
             }}
           />
           <span className="cb-text">
-            I consent to receive SMS/text messages from QUAD Healthcare Solutions at the phone number provided above.
+            I consent to receive marketing SMS/text messages from QUAD Healthcare Solutions at the phone number provided above.
           </span>
         </label>
         <div className="cb-disclaimer">
           <p>I understand that:</p>
           <ul>
-            <li>Messages may include medical credentialing updates, provider enrollment status, service notifications, and account reminders.</li>
-            <li>Message frequency varies.</li>
+            <li>Messages may include marketing, promotional offers, medical credentialing updates, provider enrollment status, service notifications, and account reminders.</li>
+            <li>Message frequency varies, up to 4 messages per month.</li>
             <li>Message and data rates may apply.</li>
             <li>Consent is not a condition of purchasing services.</li>
             <li>I can unsubscribe at any time by replying STOP. Reply HELP for help.</li>

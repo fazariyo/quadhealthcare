@@ -47,17 +47,17 @@ export default function PrivacyPolicy() {
 
           <h2>5. SMS/Text Messaging Program</h2>
           <p>
-            QUAD Healthcare Solutions offers an SMS/text messaging program to provide credentialing updates, enrollment status notifications, appointment reminders, and service-related information. By opting in to our SMS program, you agree to the following:
+            QUAD Healthcare Solutions offers an SMS/text messaging program to provide marketing, promotional offers, credentialing updates, enrollment status notifications, appointment reminders, and service-related information. By opting in to our SMS program, you agree to the following:
           </p>
           <ul>
             <li>
-              <strong>Opt-In:</strong> You may opt in to receive text messages from QUAD Healthcare Solutions by checking the SMS consent checkbox on our Contact or Enrollment forms, or by texting START to +1 (307) 381-0889. Your opt-in constitutes your express written consent to receive recurring automated text messages from QUAD Healthcare Solutions at the mobile number you provide.
+              <strong>Opt-In:</strong> You may opt in to receive <strong>marketing text messages</strong> from QUAD Healthcare Solutions by checking the SMS consent checkbox on our Contact form, by texting START, <strong>or by initiating a conversation with</strong> +1 (307) 381-0889. Your opt-in constitutes your express written consent to receive recurring text messages from QUAD Healthcare Solutions at the mobile number you provide.
             </li>
             <li>
-              <strong>Message Content:</strong> Messages may include credentialing status updates, insurance panel enrollment progress, appointment reminders, billing notifications, and general service information related to your account with QUAD Healthcare Solutions.
+              <strong>Message Content:</strong> Messages may include marketing, promotional offers, credentialing status updates, insurance panel enrollment progress, appointment reminders, billing notifications, and general service information related to your account with QUAD Healthcare Solutions.
             </li>
             <li>
-              <strong>Message Frequency:</strong> Message frequency varies based on your account activity. You may receive up to 4 messages per month.
+              <strong>Message Frequency:</strong> Message frequency varies based on your account activity and marketing campaigns. You may receive up to 4 messages per month.
             </li>
             <li>
               <strong>Message and Data Rates:</strong> Standard message and data rates may apply depending on your mobile carrier and plan. QUAD Healthcare Solutions is not responsible for any charges from your carrier.

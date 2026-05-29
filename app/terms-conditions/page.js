@@ -24,11 +24,11 @@ export default function TermsConditions() {
 
           <h2>SMS/Text Messaging Program Terms</h2>
           <p>
-            By checking the SMS consent checkbox on our Contact or Enrollment forms, or by texting START to +1 (307) 381-0889, you expressly consent to receive recurring automated text messages from QUAD Healthcare Solutions at the mobile number you provide. These messages may include credentialing updates, enrollment status notifications, appointment reminders, and service-related information.
+            By checking the SMS consent checkbox on our Contact form, or by texting START or initiating a conversation with +1 (307) 381-0889, you expressly consent to receive recurring marketing text messages from QUAD Healthcare Solutions at the mobile number you provide. These messages may include marketing, promotional offers, credentialing updates, enrollment status notifications, appointment reminders, and service-related information.
           </p>
           <ul>
             <li>
-              <strong>Message Frequency:</strong> Message frequency varies based on your account activity, up to 4 messages per month.
+              <strong>Message Frequency:</strong> Message frequency varies based on your account activity and marketing campaigns, up to 4 messages per month.
             </li>
             <li>
               <strong>Message and Data Rates:</strong> Standard message and data rates may apply. Contact your mobile carrier for details.
@@ -41,7 +41,7 @@ export default function TermsConditions() {
               <a href="mailto:info@quadhealthcaresolutions.com">info@quadhealthcaresolutions.com</a> or +1 (307) 381-0889.
             </li>
             <li>
-              <strong>Consent Not Required:</strong> Consent to receive text messages is not a condition of purchasing any goods or services from QUAD Healthcare Solutions.
+              <strong>Consent Not Required:</strong> Consent to receive marketing text messages is not a condition of purchasing any goods or services from QUAD Healthcare Solutions.
             </li>
             <li>
               <strong>Privacy:</strong> Your mobile number and opt-in data will not be shared with third parties for marketing purposes. See our Privacy Policy for full details.
